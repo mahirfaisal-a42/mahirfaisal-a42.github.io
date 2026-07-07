@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        :root {
+            --bg: #0f141c;
+            --card: #161f2d;
+            --accent: #38bdf8;
+        }
+        body { background: var(--bg); color: #fff; font-family: sans-serif; }
+        .card { background: var(--card); border: 1px solid #2d3748; padding: 2rem; border-radius: 12px; }
+        .accent { color: var(--accent); }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>${portfolioData.name}</h1>
+        <p>${portfolioData.roles.join(' | ')}</p>
+    </header>
+    <!-- Portfolio content here -->
+</body>
+</html>
