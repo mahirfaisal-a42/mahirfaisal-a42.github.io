@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Md Mahir Faisal — Portfolio</title>
+<title>Mahir Faisal — Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,10 +14,10 @@
         --ink: #0b0b0f;
         --ink-soft: #6c6c76;
         --line: #e7e6e2;
-        --accent: #5b3df5;
-        --accent-soft: #ece9ff;
-        --accent2: #ff5b3c;
-        --accent2-soft: #ffe9e2;
+        --accent: #8b0000;         /* Technical Deep Maroon Accent */
+        --accent-soft: #fbf2f2;    /* Soft Maroon hue for backgrounds */
+        --accent2: #4a0000;        /* Supporting Dark Maroon Accent */
+        --accent2-soft: #f5e6e6;   /* Tag background variation */
         --radius: 18px;
     }
 
@@ -91,7 +91,9 @@
         border-radius: 100px;
         text-decoration: none;
         white-space: nowrap;
+        transition: background .18s ease;
     }
+    .nav-cta:hover { background: var(--accent); }
     @media (max-width: 720px) { .nav-links { display: none; } }
 
     /* ============ HERO ============ */
@@ -142,7 +144,7 @@
         border-radius: 100px;
         margin-bottom: 28px;
     }
-    .eyebrow-pill .dot { width: 7px; height: 7px; border-radius: 50%; background: #3cc169; }
+    .eyebrow-pill .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); }
 
     h1 {
         font-family: 'Bricolage Grotesque', sans-serif;
@@ -288,7 +290,7 @@
         padding: 4px 10px;
         border-radius: 100px;
         background: var(--accent2-soft);
-        color: var(--accent2);
+        color: var(--accent);
     }
     .work-info h3 {
         font-family: 'Bricolage Grotesque', sans-serif;
@@ -410,37 +412,32 @@
 
 <nav>
     <div class="nav-inner">
-        <div class="nav-mark"><span class="dot"></span>M. Faisal</div>
+        <div class="nav-mark"><span class="dot"></span>Mahir Faisal</div>
         <div class="nav-links">
             <a href="#work" class="nav-link">Work</a>
             <a href="#about" class="nav-link">About</a>
             <a href="#skills" class="nav-link">Skills</a>
             <a href="#contact" class="nav-link">Contact</a>
         </div>
-        <a class="nav-cta" href="mailto:mahirfaisal.eee@gmail.com">Say hello</a>
+        <a class="nav-cta" href="mailto:mahir.faisal.a42@outlook.com">Say hello</a>
     </div>
 </nav>
 
 <div class="wrap">
     <section class="hero">
-        <!-- New Architectural Silicon Grid Graphic -->
         <div class="hero-graphic-container">
             <svg viewBox="0 0 400 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-                <!-- Background structural circles -->
                 <circle cx="200" cy="200" r="180" fill="none" stroke="#e7e6e2" stroke-width="1.5" />
                 <circle cx="200" cy="200" r="130" fill="none" stroke="#e7e6e2" stroke-width="1" stroke-dasharray="4 4" />
                 <circle cx="200" cy="200" r="80" fill="none" stroke="#e7e6e2" stroke-width="1" />
                 
-                <!-- Axis projection lines -->
                 <line x1="20" y1="200" x2="380" y2="200" stroke="#e7e6e2" stroke-width="1.5" />
                 <line x1="200" y1="20" x2="200" y2="380" stroke="#e7e6e2" stroke-width="1.5" />
                 <line x1="72" y1="72" x2="328" y2="328" stroke="#e7e6e2" stroke-width="1" stroke-dasharray="3 3" />
                 
-                <!-- Silicon wafer structural blocks -->
                 <rect x="140" y="140" width="120" height="120" rx="6" fill="none" stroke="var(--accent)" stroke-width="2" opacity="0.85"/>
                 <rect x="160" y="160" width="80" height="80" rx="4" fill="none" stroke="var(--accent2)" stroke-width="1.5" opacity="0.75"/>
                 
-                <!-- Node matrices (Representing layout structures) -->
                 <circle cx="140" cy="140" r="4" fill="var(--accent)" />
                 <circle cx="260" cy="140" r="4" fill="var(--accent)" />
                 <circle cx="140" cy="260" r="4" fill="var(--accent)" />
@@ -451,7 +448,6 @@
                 <circle cx="70" cy="200" r="3" fill="var(--ink)" />
                 <circle cx="330" cy="200" r="3" fill="var(--ink)" />
                 
-                <!-- Design geometric cross line -->
                 <path d="M 100 120 L 200 200 L 300 280" stroke="var(--ink)" stroke-width="2" fill="none" />
                 <circle cx="100" cy="120" r="5" fill="var(--ink)" />
                 <circle cx="300" cy="280" r="5" fill="var(--accent)" />
@@ -493,38 +489,38 @@
                 <div class="work-media">
                     <svg viewBox="0 0 400 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="6T SRAM cell schematic">
                         <g font-family="JetBrains Mono, monospace" font-size="10" fill="#5b5b66">
-                            <text x="200" y="26" text-anchor="middle" fill="#5b3df5" font-weight="700">VDD</text>
+                            <text x="200" y="26" text-anchor="middle" fill="var(--accent)" font-weight="700">VDD</text>
                             <text x="200" y="300" text-anchor="middle" font-weight="700">GND</text>
-                            <text x="24" y="164" fill="#ff5b3c" font-weight="700">WL</text>
+                            <text x="24" y="164" fill="var(--accent2)" font-weight="700">WL</text>
                         </g>
                         <line x1="70" y1="40" x2="330" y2="40" stroke="#c9c6ff" stroke-width="1.5"/>
                         <line x1="70" y1="280" x2="330" y2="280" stroke="#c9c6ff" stroke-width="1.5"/>
-                        <line x1="30" y1="160" x2="120" y2="160" stroke="#ff5b3c" stroke-width="1.75" stroke-dasharray="4 3"/>
-                        <line x1="280" y1="160" x2="370" y2="160" stroke="#ff5b3c" stroke-width="1.75" stroke-dasharray="4 3"/>
+                        <line x1="30" y1="160" x2="120" y2="160" stroke="var(--accent2)" stroke-width="1.75" stroke-dasharray="4 3"/>
+                        <line x1="280" y1="160" x2="370" y2="160" stroke="var(--accent2)" stroke-width="1.75" stroke-dasharray="4 3"/>
                         <g stroke="#0b0b0f" stroke-width="1.5" fill="none">
                             <line x1="155" y1="40" x2="155" y2="95"/>
                             <line x1="155" y1="215" x2="155" y2="280"/>
                         </g>
-                        <rect x="133" y="95" width="44" height="34" fill="#fff" stroke="#5b3df5" stroke-width="1.5"/>
-                        <text x="155" y="117" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="#5b3df5" font-weight="700">M1</text>
-                        <rect x="133" y="181" width="44" height="34" fill="#fff" stroke="#5b3df5" stroke-width="1.5"/>
-                        <text x="155" y="203" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="#5b3df5" font-weight="700">M2</text>
+                        <rect x="133" y="95" width="44" height="34" fill="#fff" stroke="var(--accent)" stroke-width="1.5"/>
+                        <text x="155" y="117" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="var(--accent)" font-weight="700">M1</text>
+                        <rect x="133" y="181" width="44" height="34" fill="#fff" stroke="var(--accent)" stroke-width="1.5"/>
+                        <text x="155" y="203" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="var(--accent)" font-weight="700">M2</text>
                         <line x1="155" y1="129" x2="155" y2="181" stroke="#0b0b0f" stroke-width="1.5"/>
                         <g stroke="#0b0b0f" stroke-width="1.5" fill="none">
                             <line x1="245" y1="40" x2="245" y2="95"/>
                             <line x1="245" y1="215" x2="245" y2="280"/>
                         </g>
-                        <rect x="223" y="95" width="44" height="34" fill="#fff" stroke="#5b3df5" stroke-width="1.5"/>
-                        <text x="245" y="117" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="#5b3df5" font-weight="700">M3</text>
-                        <rect x="223" y="181" width="44" height="34" fill="#fff" stroke="#5b3df5" stroke-width="1.5"/>
-                        <text x="245" y="203" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="#5b3df5" font-weight="700">M4</text>
+                        <rect x="223" y="95" width="44" height="34" fill="#fff" stroke="var(--accent)" stroke-width="1.5"/>
+                        <text x="245" y="117" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="var(--accent)" font-weight="700">M3</text>
+                        <rect x="223" y="181" width="44" height="34" fill="#fff" stroke="var(--accent)" stroke-width="1.5"/>
+                        <text x="245" y="203" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="var(--accent)" font-weight="700">M4</text>
                         <line x1="245" y1="129" x2="245" y2="181" stroke="#0b0b0f" stroke-width="1.5"/>
                         <path d="M177 112 H215 V198 H223" fill="none" stroke="#8a8a94" stroke-width="1.25"/>
                         <path d="M223 112 H205 V198 H177" fill="none" stroke="#8a8a94" stroke-width="1.25" opacity="0.7"/>
-                        <rect x="88" y="143" width="34" height="34" fill="#fff" stroke="#ff5b3c" stroke-width="1.5"/>
-                        <text x="105" y="165" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#ff5b3c" font-weight="700">M5</text>
-                        <rect x="278" y="143" width="34" height="34" fill="#fff" stroke="#ff5b3c" stroke-width="1.5"/>
-                        <text x="295" y="165" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#ff5b3c" font-weight="700">M6</text>
+                        <rect x="88" y="143" width="34" height="34" fill="#fff" stroke="var(--accent2)" stroke-width="1.5"/>
+                        <text x="105" y="165" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--accent2)" font-weight="700">M5</text>
+                        <rect x="278" y="143" width="34" height="34" fill="#fff" stroke="var(--accent2)" stroke-width="1.5"/>
+                        <text x="295" y="165" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="var(--accent2)" font-weight="700">M6</text>
                         <line x1="122" y1="160" x2="133" y2="160" stroke="#8a8a94" stroke-width="1.25"/>
                         <line x1="267" y1="160" x2="278" y2="160" stroke="#8a8a94" stroke-width="1.25"/>
                     </svg>
@@ -547,11 +543,11 @@
                         <g stroke="#e7e6e2" stroke-width="1">
                             <line x1="45" y1="22" x2="390" y2="22"/><line x1="45" y1="62" x2="390" y2="62"/><line x1="45" y1="102" x2="390" y2="102"/><line x1="45" y1="142" x2="390" y2="142"/><line x1="45" y1="182" x2="390" y2="182"/>
                         </g>
-                        <path d="M45 22 C 65 8, 85 36, 105 20 S 145 6, 165 24 S 205 38, 225 16 S 265 6, 285 26 S 325 38, 345 14 S 375 6, 390 22" fill="none" stroke="#5b3df5" stroke-width="1.6"/>
-                        <path d="M45 62 C 70 48, 80 78, 110 60 S 150 42, 180 64 S 220 80, 250 58 S 290 40, 320 62 S 360 78, 390 60" fill="none" stroke="#ff5b3c" stroke-width="1.6"/>
+                        <path d="M45 22 C 65 8, 85 36, 105 20 S 145 6, 165 24 S 205 38, 225 16 S 265 6, 285 26 S 325 38, 345 14 S 375 6, 390 22" fill="none" stroke="var(--accent)" stroke-width="1.6"/>
+                        <path d="M45 62 C 70 48, 80 78, 110 60 S 150 42, 180 64 S 220 80, 250 58 S 290 40, 320 62 S 360 78, 390 60" fill="none" stroke="var(--accent2)" stroke-width="1.6"/>
                         <path d="M45 102 C 60 90, 90 116, 120 100 S 165 82, 195 104 S 235 120, 265 98 S 305 80, 335 102 S 370 116, 390 100" fill="none" stroke="#3cc169" stroke-width="1.6"/>
-                        <path d="M45 142 C 68 128, 82 158, 112 140 S 155 122, 185 144 S 225 160, 255 138 S 295 120, 325 142 S 360 158, 390 142" fill="none" stroke="#5b3df5" stroke-width="1.6" opacity="0.65"/>
-                        <path d="M45 182 C 62 170, 95 198, 125 180 S 168 162, 198 184 S 238 200, 268 178 S 308 160, 338 182 S 370 198, 390 182" fill="none" stroke="#ff5b3c" stroke-width="1.6" opacity="0.65"/>
+                        <path d="M45 142 C 68 128, 82 158, 112 140 S 155 122, 185 144 S 225 160, 255 138 S 295 120, 325 142 S 360 158, 390 142" fill="none" stroke="var(--accent)" stroke-width="1.6" opacity="0.65"/>
+                        <path d="M45 182 C 62 170, 95 198, 125 180 S 168 162, 198 184 S 238 200, 268 178 S 308 160, 338 182 S 370 198, 390 182" fill="none" stroke="var(--accent2)" stroke-width="1.6" opacity="0.65"/>
                     </svg>
                 </div>
                 <div class="work-info">
@@ -565,10 +561,10 @@
             <div class="work-card reveal">
                 <div class="work-media">
                     <svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AUST Robotics Club logo mark">
-                        <polygon points="150,30 210,66 210,128 150,164 90,128 90,66" fill="#fff" stroke="#5b3df5" stroke-width="1.75"/>
+                        <polygon points="150,30 210,66 210,128 150,164 90,128 90,66" fill="#fff" stroke="var(--accent)" stroke-width="1.75"/>
                         <circle cx="150" cy="97" r="25" fill="none" stroke="#0b0b0f" stroke-width="1.75"/>
-                        <circle cx="150" cy="97" r="6" fill="#ff5b3c"/>
-                        <g stroke="#5b3df5" stroke-width="1.5">
+                        <circle cx="150" cy="97" r="6" fill="var(--accent2)"/>
+                        <g stroke="var(--accent)" stroke-width="1.5">
                             <line x1="150" y1="30" x2="150" y2="72"/><line x1="210" y1="66" x2="174" y2="86"/><line x1="210" y1="128" x2="174" y2="108"/>
                             <line x1="150" y1="164" x2="150" y2="122"/><line x1="90" y1="128" x2="126" y2="108"/><line x1="90" y1="66" x2="126" y2="86"/>
                         </g>
@@ -607,7 +603,7 @@
             </div>
 
             <div class="about-body">
-                <p><strong>Md Mahir Faisal</strong> is an Electrical and Electronic Engineering student at Ahsanullah University of Science and Technology (CGPA: 3.10), specializing in IC physical design, automated verification, and time-series deep learning research.</p>
+                <p><strong>Mahir Faisal</strong> is an Electrical and Electronic Engineering student at Ahsanullah University of Science and Technology (CGPA: 3.10), specializing in IC physical design, automated verification, and time-series deep learning research.</p>
                 <p>The work merges rigorous engineering logic with technical layout design — building clean, high-precision documentation on the hardware side, and clear, structured visual systems on the design side.</p>
 
                 <div class="fact-pills">
@@ -677,7 +673,7 @@
             <h2>Let's build something precise.</h2>
             <p>Open to VLSI, physical design, and research roles — and always up for a visual systems project on the side.</p>
             <div class="contact-links">
-                <a href="mailto:mahirfaisal.eee@gmail.com">mahirfaisal.eee@gmail.com</a>
+                <a href="mailto:mahir.faisal.a42@outlook.com">mahir.faisal.a42@outlook.com</a>
                 <a href="https://www.linkedin.com/in/mahirfaisal~/" target="_blank">LinkedIn</a>
                 <a href="https://github.com/mahirfaisal-a42" target="_blank">GitHub</a>
             </div>
@@ -685,7 +681,7 @@
     </section>
 
     <footer>
-        <div>© Md Mahir Faisal</div>
+        <div>© Mahir Faisal</div>
         <div>Built with intent — no template defaults</div>
     </footer>
 </div>
