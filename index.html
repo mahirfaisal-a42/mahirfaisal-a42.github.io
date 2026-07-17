@@ -99,11 +99,11 @@
     /* ============ HERO ============ */
     .hero {
         position: relative;
-        min-height: 85vh;
+        min-height: 90vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 100px 0 80px;
+        padding: 120px 0 100px;
         overflow: hidden;
     }
     .hero-graphic-container {
@@ -113,7 +113,7 @@
         width: 100%;
         height: 100%;
         z-index: 0;
-        opacity: 0.55; 
+        opacity: 0.85; 
         pointer-events: none;
     }
     .hero-inner { position: relative; z-index: 1; }
@@ -417,73 +417,89 @@
 <div class="wrap">
     <section class="hero">
         <div class="hero-graphic-container">
-            <svg viewBox="0 0 1200 800" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMid slice">
+            <svg viewBox="0 0 1200 900" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMid slice">
                 <defs>
                     <linearGradient id="gridFade" x1="100%" y1="0%" x2="0%" y2="100%">
-                        <stop offset="0%" style="stop-color: var(--accent); stop-opacity: 0.15;" />
-                        <stop offset="40%" style="stop-color: var(--accent2); stop-opacity: 0.05;" />
+                        <stop offset="0%" style="stop-color: var(--accent); stop-opacity: 0.22;" />
+                        <stop offset="50%" style="stop-color: var(--accent2); stop-opacity: 0.08;" />
                         <stop offset="100%" style="stop-color: var(--bg); stop-opacity: 0;" />
                     </linearGradient>
                     <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
                         <stop offset="0%" style="stop-color: var(--accent); stop-opacity: 0;" />
-                        <stop offset="50%" style="stop-color: var(--accent); stop-opacity: 0.25;" />
-                        <stop offset="100%" style="stop-color: var(--accent2); stop-opacity: 0.6;" />
+                        <stop offset="30%" style="stop-color: var(--accent); stop-opacity: 0.35;" />
+                        <stop offset="70%" style="stop-color: var(--accent2); stop-opacity: 0.7;" />
+                        <stop offset="100%" style="stop-color: var(--accent); stop-opacity: 0.1;" />
                     </linearGradient>
-                    <pattern id="microGrid" width="40" height="40" patternUnits="userSpaceOnUse">
-                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e1e4e8" stroke-width="0.75" opacity="0.6"/>
+                    <linearGradient id="radialAccent" cx="80%" cy="30%" r="60%">
+                        <stop offset="0%" style="stop-color: var(--accent-soft); stop-opacity: 1;" />
+                        <stop offset="100%" style="stop-color: var(--bg); stop-opacity: 0;" />
+                    </linearGradient>
+                    <pattern id="microGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+                        <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#e1e4e8" stroke-width="0.8" opacity="0.7"/>
                     </pattern>
                 </defs>
 
-                <!-- Complex Microscopic Substrate Matrix -->
+                <!-- Ambient Glow and Complex Grid Matrix -->
+                <rect width="100%" height="100%" fill="url(#radialAccent)" />
                 <rect width="100%" height="100%" fill="url(#microGrid)" />
                 <rect width="100%" height="100%" fill="url(#gridFade)" />
 
-                <!-- Deep Structural Coordinate Geometry -->
-                <circle cx="950" cy="400" r="320" fill="none" stroke="var(--line)" stroke-width="1" />
-                <circle cx="950" cy="400" r="220" fill="none" stroke="var(--accent)" stroke-width="0.75" stroke-dasharray="4 4" opacity="0.5" />
-                <circle cx="950" cy="400" r="120" fill="none" stroke="var(--line)" stroke-width="1" />
+                <!-- Deep Structural Engineering Rings & Concentric Vectors -->
+                <circle cx="950" cy="350" r="420" fill="none" stroke="var(--line)" stroke-width="1.2" />
+                <circle cx="950" cy="350" r="320" fill="none" stroke="var(--line)" stroke-width="1" />
+                <circle cx="950" cy="350" r="220" fill="none" stroke="var(--accent)" stroke-width="0.8" stroke-dasharray="6 4" opacity="0.6" />
+                <circle cx="950" cy="350" r="120" fill="none" stroke="var(--line)" stroke-width="1" />
                 
-                <!-- Circuit Trace Bus Interconnect Networks -->
-                <g stroke="var(--accent2)" stroke-width="1.25" fill="none" opacity="0.35">
-                    <path d="M 600,150 L 800,150 L 880,230 L 880,350" />
-                    <path d="M 650,120 L 820,120 L 910,210 L 910,320" />
-                    <path d="M 520,200 L 750,200 L 840,290 L 840,420" />
+                <!-- Expanded Circuit Trace Bus Interconnect Networks -->
+                <g stroke="var(--accent2)" stroke-width="1.5" fill="none" opacity="0.45">
+                    <path d="M 500,100 L 780,100 L 880,200 L 880,380" />
+                    <path d="M 550,70 L 810,70 L 910,170 L 910,350" />
+                    <path d="M 420,160 L 730,160 L 830,260 L 830,440" />
+                    <path d="M 620,40 L 850,40 L 950,140 L 950,290" />
                 </g>
 
-                <!-- High-Fidelity Signal Vector Traces (ChronoNet / EEG Imagery) -->
-                <path d="M 400,480 C 550,560 620,320 750,450 C 880,580 920,360 1050,420 C 1120,450 1150,390 1200,400" fill="none" stroke="url(#waveGrad)" stroke-width="2.5" />
-                <path d="M 400,510 C 520,580 650,380 780,420 C 910,460 960,320 1080,460 C 1140,520 1160,430 1200,430" fill="none" stroke="var(--accent)" stroke-width="1" opacity="0.3" />
+                <!-- High-Definition Multi-Channel Time-Series Waves (EEG & ChronoNet Modeling) -->
+                <path d="M 350,520 C 500,620 580,340 750,490 C 920,640 940,380 1080,450 C 1150,480 1180,400 1250,420" fill="none" stroke="url(#waveGrad)" stroke-width="3" />
+                <path d="M 350,555 C 470,640 610,400 780,455 C 950,500 980,330 1120,500 C 1180,570 1200,460 1250,460" fill="none" stroke="var(--accent)" stroke-width="1.2" opacity="0.4" />
+                <path d="M 350,485 C 480,530 550,420 710,410 C 870,400 920,490 1050,390 C 1120,340 1190,420 1250,370" fill="none" stroke="var(--accent2)" stroke-width="0.8" stroke-dasharray="2 2" opacity="0.5" />
 
-                <!-- Integrated Silicon Mask Cell Blocks (SRAM Analogy) -->
+                <!-- Multi-Block Silicon Micro-Architecture Layers (6T SRAM Clusters) -->
                 <g fill="none" stroke="var(--accent)" stroke-width="1.5">
-                    <rect x="910" y="360" width="80" height="80" rx="8" fill="var(--bg-raised)" />
-                    <rect x="930" y="380" width="40" height="40" rx="4" fill="none" stroke="var(--accent2)" stroke-width="1" />
-                    <!-- Intersecting Node Micro-Dots -->
-                    <circle cx="910" cy="360" r="4" fill="var(--ink)" />
-                    <circle cx="990" cy="360" r="4" fill="var(--accent)" />
-                    <circle cx="910" cy="440" r="4" fill="var(--accent2)" />
-                    <circle cx="990" cy="440" r="4" fill="var(--ink)" />
+                    <!-- Block Alpha -->
+                    <rect x="910" y="310" width="80" height="80" rx="8" fill="var(--bg-raised)" stroke-width="2" />
+                    <rect x="930" y="330" width="40" height="40" rx="4" fill="none" stroke="var(--accent2)" stroke-width="1.2" />
+                    <circle cx="910" cy="310" r="4.5" fill="var(--ink)" stroke="none" />
+                    <circle cx="990" cy="310" r="4.5" fill="var(--accent)" stroke="none" />
+                    <circle cx="910" cy="390" r="4.5" fill="var(--accent2)" stroke="none" />
+                    <circle cx="990" cy="390" r="4.5" fill="var(--ink)" stroke="none" />
+                    
+                    <!-- Block Beta Layout Linkages -->
+                    <rect x="1030" y="230" width="60" height="60" rx="6" fill="var(--bg-raised)" opacity="0.85" />
+                    <line x1="990" y1="310" x2="1030" y2="260" stroke="var(--accent)" stroke-width="1" stroke-dasharray="3 3" />
+                    <circle cx="1030" cy="230" r="3.5" fill="var(--accent)" stroke="none" />
+                    <circle cx="1090" cy="290" r="3.5" fill="var(--accent2)" stroke="none" />
                 </g>
 
-                <!-- Vector Bus Node Targets -->
+                <!-- Distributed Interconnect Terminal Elements -->
                 <g fill="var(--ink)">
-                    <circle cx="600" cy="150" r="3" /><circle cx="650" cy="120" r="3" /><circle cx="520" cy="200" r="3" />
-                    <circle cx="880" cy="350" r="3" fill="var(--accent)" /><circle cx="910" cy="320" r="3" /><circle cx="840" cy="420" r="3" />
+                    <circle cx="500" cy="100" r="3.5" /><circle cx="550" cy="70" r="3.5" /><circle cx="420" cy="160" r="3.5" /><circle cx="620" cy="40" r="3.5" />
+                    <circle cx="880" cy="380" r="3.5" fill="var(--accent)" /><circle cx="910" cy="350" r="3.5" /><circle cx="830" cy="440" r="3.5" /><circle cx="950" cy="290" r="3.5" fill="var(--accent)" />
                 </g>
                 
-                <!-- Explicit Typography Blueprint Labels -->
-                <g font-family="JetBrains Mono, monospace" font-size="9" fill="var(--ink-soft)" opacity="0.7">
-                    <text x="960" y="345" text-anchor="middle">CELL_MATRIX_6T</text>
-                    <text x="740" y="395" transform="rotate(-45 740 395)">SIGNAL_CHRONONET_HZ</text>
-                    <text x="1100" y="780" text-anchor="end">SCALE: 45NM / 18NM SUBSTRATE</text>
+                <!-- Geometric Blueprint Vector Typography -->
+                <g font-family="JetBrains Mono, monospace" font-size="9" fill="var(--ink-soft)" opacity="0.8">
+                    <text x="950" y="295" text-anchor="middle">MACRO_BLOCK_6T_SRAM</text>
+                    <text x="730" y="440" transform="rotate(-40 730 440)">PHYSIO_CHRONONET_SIGNAL_IN</text>
+                    <text x="1150" y="850" text-anchor="end">DIE_AREA: 45NM / 18NM HYBRID MODE</text>
+                    <text x="500" y="20" text-anchor="start">// BUS_LINE_VALIDATION_ACTIVE</text>
                 </g>
             </svg>
         </div>
 
         <div class="hero-inner">
-            <div class="eyebrow-pill"><span class="dot"></span>Available for Technical Roles — EEE Graduate[cite: 2, 5]</div>
-            <h1>Building at the edge of <span class="accent-word">silicon</span> and signal.[cite: 2, 5]</h1>
-            <p class="hero-sub">Electrical &amp; Electronic Engineering graduate specializing in analog layout masking, circuit block validation, memory macro verification, and time-series physiological deep learning models.[cite: 2, 5]</p>
+            <div class="eyebrow-pill"><span class="dot"></span>Available for Technical Roles — EEE Graduate</div>
+            <h1>Building at the edge of <span class="accent-word">silicon</span> and signal.</h1>
+            <p class="hero-sub">Electrical &amp; Electronic Engineering graduate specializing in analog layout masking, circuit block validation, memory macro verification, and time-series physiological deep learning models.</p>
             <div class="hero-actions">
                 <a class="btn-primary" href="#work">View my work →</a>
                 <a class="btn-ghost" href="https://github.com/mahirfaisal-a42" target="_blank">GitHub</a>
@@ -495,8 +511,8 @@
 
 <div class="marquee-band">
     <div class="marquee-track">
-        <span>Cadence Virtuoso</span><span>Spectre SPICE</span><span>CMOS IC Layout</span><span>DRC / LVS Sign-off</span><span>Verilog HDL</span><span>ChronoNet Modeling</span><span>SRAM Memory Macro</span><span>Adobe Illustrator</span>[cite: 2, 5]
-        <span>Cadence Virtuoso</span><span>Spectre SPICE</span><span>CMOS IC Layout</span><span>DRC / LVS Sign-off</span><span>Verilog HDL</span><span>ChronoNet Modeling</span><span>SRAM Memory Macro</span><span>Adobe Illustrator</span>[cite: 2, 5]
+        <span>Cadence Virtuoso</span><span>Spectre SPICE</span><span>CMOS IC Layout</span><span>DRC / LVS Sign-off</span><span>Verilog HDL</span><span>ChronoNet Modeling</span><span>SRAM Memory Macro</span><span>Adobe Illustrator</span>
+        <span>Cadence Virtuoso</span><span>Spectre SPICE</span><span>CMOS IC Layout</span><span>DRC / LVS Sign-off</span><span>Verilog HDL</span><span>ChronoNet Modeling</span><span>SRAM Memory Macro</span><span>Adobe Illustrator</span>
     </div>
 </div>
 
@@ -507,7 +523,7 @@
                 <span class="block-num">01 — Selected Projects</span>
                 <h2>Engineering &amp; Design Case Studies</h2>
             </div>
-            <p>Integrated hardware, physiological modeling pipelines, and geometric communication frameworks.[cite: 2, 5]</p>
+            <p>Integrated hardware, physiological modeling pipelines, and geometric communication frameworks.</p>
         </div>
 
         <div class="work-list">
@@ -553,10 +569,10 @@
                 </div>
                 <div class="work-info">
                     <div class="work-tags"><span class="work-tag">VLSI</span><span class="work-tag">Cadence Virtuoso</span><span class="work-tag">Memory</span></div>
-                    <h3>4-Kilobit (64x64) 6T SRAM Memory Subsystem[cite: 2, 5]</h3>
-                    <p><strong>Objective —</strong> Design a high-density 6T SRAM memory sub-macro layout engineered for minimal leakage current and precise layout boundaries.[cite: 2, 5]</p>
-                    <p><strong>Execution —</strong> Captured full device-level schematics and laid down hand-routed physical cell arrays. Developed peripheral control networks including precharge paths, row/column address decoders, sense amplifiers, and write drivers.[cite: 2, 5]</p>
-                    <p><strong>Verification —</strong> Implemented comprehensive sign-off validation routines via DRC and LVS checks to secure strict layout rule compliance.[cite: 2, 5]</p>
+                    <h3>4-Kilobit (64x64) 6T SRAM Memory Subsystem</h3>
+                    <p><strong>Objective —</strong> Design a high-density 6T SRAM memory sub-macro layout engineered for minimal leakage current and precise layout boundaries.</p>
+                    <p><strong>Execution —</strong> Captured full device-level schematics and laid down hand-routed physical cell arrays. Developed peripheral control networks including precharge paths, row/column address decoders, sense amplifiers, and write drivers.</p>
+                    <p><strong>Verification —</strong> Implemented comprehensive sign-off validation routines via DRC and LVS checks to secure strict layout rule compliance.</p>
                 </div>
             </div>
 
@@ -578,9 +594,9 @@
                 </div>
                 <div class="work-info">
                     <div class="work-tags"><span class="work-tag">Deep Learning</span><span class="work-tag">MATLAB</span><span class="work-tag">Research</span></div>
-                    <h3>ChronoNet Modeling for Time-Series Analysis[cite: 2, 5]</h3>
-                    <p><strong>Objective —</strong> Isolate relevant neural markers and evaluate diagnostic layer accuracy within highly complex physiological datasets.[cite: 2, 5]</p>
-                    <p><strong>Execution —</strong> Deployed custom programmatic filters in MATLAB to scrub environmental frequency artifacts.[cite: 2, 5] Constructed a specialized <strong>ChronoNet</strong> deep learning architecture layout, achieving high-accuracy classification boundaries across patient signal samples.[cite: 2, 5]</p>
+                    <h3>ChronoNet Modeling for Time-Series Analysis</h3>
+                    <p><strong>Objective —</strong> Isolate relevant neural markers and evaluate diagnostic layer accuracy within highly complex physiological datasets.</p>
+                    <p><strong>Execution —</strong> Deployed custom programmatic filters in MATLAB to scrub environmental frequency artifacts. Constructed a specialized <strong>ChronoNet</strong> deep learning architecture layout, achieving high-accuracy classification boundaries across patient signal samples.</p>
                 </div>
             </div>
 
@@ -603,9 +619,9 @@
                 </div>
                 <div class="work-info">
                     <div class="work-tags"><span class="work-tag">Graphics Design</span><span class="work-tag">Illustrator</span><span class="work-tag">Branding</span></div>
-                    <h3>Technical Asset Pipelines &amp; Brand Systems[cite: 2, 5]</h3>
-                    <p><strong>Objective —</strong> Standardize communication visual rules and engineering event layouts for multi-tiered organizational networks.[cite: 2, 5]</p>
-                    <p><strong>Approach —</strong> Programmed strict geometric layouts, vector blueprints, and unified typography palettes.[cite: 2, 5] Managed branding and publication design workflows as Lead Presenter for graphics/logistics correlation web-workshops.[cite: 2, 5]</p>
+                    <h3>Technical Asset Pipelines &amp; Brand Systems</h3>
+                    <p><strong>Objective —</strong> Standardize communication visual rules and engineering event layouts for multi-tiered organizational networks.</p>
+                    <p><strong>Approach —</strong> Programmed strict geometric layouts, vector blueprints, and unified typography palettes. Managed branding and publication design workflows as Lead Presenter for graphics/logistics correlation web-workshops.</p>
                 </div>
             </div>
         </div>
@@ -629,27 +645,27 @@
             </div>
 
             <div class="about-body">
-                <p><strong>Md. Mahir Faisal</strong> is an Electrical and Electronic Engineering graduate from Ahsanullah University of Science and Technology.[cite: 2, 5] He blends device-level architectural validation with optimized layout practices to tackle complex physical design parameters.[cite: 2, 5]</p>
-                <p>His engineering practice focuses on deep-tier physical verification using industry-standard EDA automation alongside data analytics pipelines to evaluate and model high-frequency systems.[cite: 2, 5]</p>
+                <p><strong>Md. Mahir Faisal</strong> is an Electrical and Electronic Engineering graduate from Ahsanullah University of Science and Technology. He blends device-level architectural validation with optimized layout practices to tackle complex physical design parameters.</p>
+                <p>His engineering practice focuses on deep-tier physical verification using industry-standard EDA automation alongside data analytics pipelines to evaluate and model high-frequency systems.</p>
 
                 <div class="fact-pills">
                     <div class="fact-pill"><span class="k">Discipline</span><span class="v">Electrical Engineer &amp; Designer</span></div>
                     <div class="fact-pill"><span class="k">Institution</span><span class="v">AUST</span></div>
-                    <div class="fact-pill"><span class="k">CGPA</span><span class="v">3.123</span></div>
+                    <div class="fact-pill"><span class="k">CGPA</span><span class="v">3.10</span></div>
                 </div>
 
                 <div class="milestones">
                     <div class="milestone">
                         <div class="milestone-tag">01</div>
-                        <div><div class="milestone-title">B.Sc. in Electrical and Electronic Engineering</div><div class="milestone-sub">Ahsanullah University of Science and Technology (AUST)[cite: 2, 5]</div></div>
+                        <div><div class="milestone-title">B.Sc. in Electrical and Electronic Engineering</div><div class="milestone-sub">Ahsanullah University of Science and Technology (AUST)</div></div>
                     </div>
                     <div class="milestone">
                         <div class="milestone-tag">02</div>
-                        <div><div class="milestone-title">IC Mask Design Training (Essential Layout)</div><div class="milestone-sub">Ulkasemi VLSI Training Institute (UVTI) | 45nm &amp; 18nm nodes[cite: 2, 5]</div></div>
+                        <div><div class="milestone-title">IC Mask Design Training (Essential Layout)</div><div class="milestone-sub">Ulkasemi VLSI Training Institute (UVTI) | 45nm &amp; 18nm nodes</div></div>
                     </div>
                     <div class="milestone">
                         <div class="milestone-tag">03</div>
-                        <div><div class="milestone-title">Organizing Secretary &amp; Graphics Director</div><div class="milestone-sub">AUST Robotics Club (Managed events for 2,000+ national participants)[cite: 2, 5]</div></div>
+                        <div><div class="milestone-title">Organizing Secretary &amp; Graphics Director</div><div class="milestone-sub">AUST Robotics Club (Managed events for 2,000+ national participants)</div></div>
                     </div>
                 </div>
             </div>
@@ -665,32 +681,32 @@
         </div>
         <div class="skill-grid reveal">
             <div class="skill-col">
-                <h4>Silicon Physical Design[cite: 2, 5]</h4>
+                <h4>Silicon Physical Design</h4>
                 <ul>
-                    <li>Cadence Virtuoso &amp; Spectre[cite: 2, 5]</li>
-                    <li>CMOS IC Mask Layout Design[cite: 2, 5]</li>
-                    <li>DRC / LVS Physical Sign-off[cite: 2, 5]</li>
-                    <li>Analog Design (Current Mirrors, Op-Amps)[cite: 2, 5]</li>
-                    <li>Verilog HDL &amp; Quartus[cite: 2, 5]</li>
+                    <li>Cadence Virtuoso &amp; Spectre</li>
+                    <li>CMOS IC Mask Layout Design</li>
+                    <li>DRC / LVS Physical Sign-off</li>
+                    <li>Analog Design (Current Mirrors, Op-Amps)</li>
+                    <li>Verilog HDL &amp; Quartus</li>
                 </ul>
             </div>
             <div class="skill-col">
-                <h4>Analytics &amp; Infrastructures[cite: 2, 5]</h4>
+                <h4>Analytics &amp; Infrastructures</h4>
                 <ul>
-                    <li>MATLAB Signal Processing[cite: 2, 5]</li>
-                    <li>Deep Learning Architecture[cite: 2, 5]</li>
-                    <li>Linux (Red Hat Environment)[cite: 2, 5]</li>
-                    <li>C++ / C Engineering Code[cite: 2, 5]</li>
-                    <li>Orcad Schematic Capture[cite: 2, 5]</li>
+                    <li>MATLAB Signal Processing</li>
+                    <li>Deep Learning Architecture</li>
+                    <li>Linux (Red Hat Environment)</li>
+                    <li>C++ / C Engineering Code</li>
+                    <li>Orcad Schematic Capture</li>
                 </ul>
             </div>
             <div class="skill-col">
-                <h4>Visual System Architecture[cite: 2, 5]</h4>
+                <h4>Visual System Architecture</h4>
                 <ul>
-                    <li>Minimalist Vector Illustration[cite: 2, 5]</li>
-                    <li>Branding &amp; Corporate Identity[cite: 2, 5]</li>
-                    <li>Adobe Illustrator Software[cite: 2, 5]</li>
-                    <li>Structural Typography Layouts[cite: 2, 5]</li>
+                    <li>Minimalist Vector Illustration</li>
+                    <li>Branding &amp; Corporate Identity</li>
+                    <li>Adobe Illustrator Software</li>
+                    <li>Structural Typography Layouts</li>
                 </ul>
             </div>
         </div>
@@ -699,7 +715,7 @@
     <section class="block" id="contact">
         <div class="contact-block reveal">
             <h2>Let's build something precise.</h2>
-            <p>Open to VLSI design, analog/digital physical mask validation, and time-series engineering research configurations.[cite: 2, 5]</p>
+            <p>Open to VLSI design, analog/digital physical mask validation, and time-series engineering research configurations.</p>
             <div class="contact-links">
                 <a href="mailto:mahir.faisal.a42@gmail.com">mahir.faisal.a42@gmail.com</a>
                 <a href="https://www.linkedin.com/in/mahir-faisal" target="_blank">LinkedIn</a>
